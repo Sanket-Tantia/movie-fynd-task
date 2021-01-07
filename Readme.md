@@ -1,46 +1,44 @@
-#HOW TO CLONE AND USE THE DJANGO APP
-Step1: Create a virtualenv and activate it
-Step2: Clone the repo using: git clone https://github.com/Sanket-Tantia/movie-fynd-task.git
-Step3: Install the dependencies using command: pip install -r requirements.txt
-Step4: Run the migrations and migrate using two commands: python manage.py makemigrations & python manage.py migrate
-Step5: Load all the movies into database using custom command: python manage.py loadmovie
-Step6: Start the localhost server: python manage.py runserver
+## HOW TO USE THE IMDB MOVIE APP
+- Step1: Create a virtualenv and activate it
+- Step2: Clone the repo using: git clone https://github.com/Sanket-Tantia/movie-fynd-task.git
+- Step3: Install the dependencies using command: pip install -r requirements.txt
+- Step4: Run the migrations and migrate using two commands: python manage.py makemigrations & python manage.py migrate
+- Step5: Load all the movies into database using custom command: python manage.py loadmovie
+- Step6: Start the localhost server: python manage.py runserver
 
 
 Now the application is ready. To test the APIs, we can do it using POSTMAN:
 
-To search for movies:
-Movies can be searched using different parameters: name, director_name, genre_name, imdb_score, popularity
+## Search movies:
+Movies can be searched using different parameters: name, director_name, genre_name, imdb_score, popularity:
+#### Get all movies: 
+REQUEST TYPE: GET
+URL: https://movie-fynd-task.herokuapp.com/movie
 
-#Get all movies: 
-#REQUEST TYPE: GET
-URL: https://go-fynd-imdb.herokuapp.com/movie
+#### Filter result or search by parameters:
+REQUEST TYPE: GET
+URL: https://movie-fynd-task.herokuapp.com/movie?search={value}
 
-#Filter result or search by parameters:
-#REQUEST TYPE: GET
-URL: https://go-fynd-imdb.herokuapp.com/movie?search={value}
+- Search a particular movie by name
+REQUEST TYPE: GET
+URL: https://movie-fynd-task.herokuapp.com/api/movie?search=vertigo
 
-e.g 
-#Search a particular movie by name
-#REQUEST TYPE: GET
-URL: https://go-fynd-imdb.herokuapp.com/api/movie?search=vertigo
-
-#Search a particular movie by director name
-#REQUEST TYPE: GET
-URL: https://go-fynd-imdb.herokuapp.com/api/movie?search=Alfred Hitchcock
+- Search a particular movie by director name
+REQUEST TYPE: GET
+URL: https://movie-fynd-task.herokuapp.com/api/movie?search=Alfred Hitchcock
 
 
-#Search a particular movie by genre
-#REQUEST TYPE: GET
-URL: https://go-fynd-imdb.herokuapp.com/api/movie?search=Adventure
+- Search a particular movie by genre
+REQUEST TYPE: GET
+URL: https://movie-fynd-task.herokuapp.com/api/movie?search=Adventure
 
 Note: All search parameters are case insensitive
 
-
-#Admin Create A Movie:
+#### Admin operations
+- **Create a new Movie** :
 Assuming the new data (json object) will follow the same pattern as the json object shared in json format.
 REQUEST TYPE: POST
-URL: https://go-fynd-imdb.herokuapp.com/movie
+URL: https://movie-fynd-task.herokuapp.com/movie
 JSON BODY:
 {
     "name": "The Office",
@@ -56,14 +54,14 @@ JSON BODY:
     ]
 }
 HEADER: {
-    Authorization: Token dc52f377ac61c3665888c4eac371ea3f99a6def0
+    Authorization: Token <token_value>
 }
 
 
-#Admin Update A Movie:
+- **Update an existing Movie**:
 Assuming the update data (json object) will follow the same pattern as the json object shared in json format.
 REQUEST TYPE: PUT
-URL: https://go-fynd-imdb.herokuapp.com/movie
+URL: https://movie-fynd-task.herokuapp.com/movie
 JSON BODY:
 {
     "name": "The Office",
@@ -79,18 +77,18 @@ JSON BODY:
     ]
 }
 HEADER: {
-    Authorization: Token dc52f377ac61c3665888c4eac371ea3f99a6def0
+    Authorization: Token <token_value>
 }
 
 
 
-#Admin Delete A Movie:
+- **Delete a Movie**:
 REQUEST TYPE: DELETE
-URL: https://go-fynd-imdb.herokuapp.com/movie
+URL: https://movie-fynd-task.herokuapp.com/movie
 JSON BODY:
 {
     "name": "The Office"
 }
 HEADER: {
-    Authorization: Token dc52f377ac61c3665888c4eac371ea3f99a6def0
+    Authorization: Token <token_value>
 }
