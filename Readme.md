@@ -12,33 +12,32 @@ Now the application is ready. To test the APIs, we can do it using POSTMAN:
 ## Search movies:
 Movies can be searched using different parameters: name, director_name, genre_name, imdb_score, popularity:
 #### Get all movies: 
-REQUEST TYPE: GET
-URL: https://movie-fynd-task.herokuapp.com/movie
+REQUEST TYPE: GET\
+URL: https://movie-fynd-task.herokuapp.com/movie\
 
 #### Filter result or search by parameters:
-REQUEST TYPE: GET
-URL: https://movie-fynd-task.herokuapp.com/movie?search={value}
+REQUEST TYPE: GET\
+URL: https://movie-fynd-task.herokuapp.com/movie?search={value}\
 
 - Search a particular movie by name
-REQUEST TYPE: GET
+REQUEST TYPE: GET\
 URL: https://movie-fynd-task.herokuapp.com/api/movie?search=vertigo
 
 - Search a particular movie by director name
-REQUEST TYPE: GET
+REQUEST TYPE: GET\
 URL: https://movie-fynd-task.herokuapp.com/api/movie?search=Alfred Hitchcock
 
-
 - Search a particular movie by genre
-REQUEST TYPE: GET
+REQUEST TYPE: GET\
 URL: https://movie-fynd-task.herokuapp.com/api/movie?search=Adventure
 
 Note: All search parameters are case insensitive
 
 #### Admin operations
 - **Create a new Movie** :
-Assuming the new data (json object) will follow the same pattern as the json object shared in json format.
-REQUEST TYPE: POST
-URL: https://movie-fynd-task.herokuapp.com/movie
+Assuming the new data (json object) will follow the same pattern as the json object shared in json format.\
+REQUEST TYPE: POST\
+URL: https://movie-fynd-task.herokuapp.com/movie\
 JSON BODY:
 {
     "name": "The Office",
@@ -52,16 +51,16 @@ JSON BODY:
             "name": "Comedy"
         }
     ]
-}
+}\
 HEADER: {
     Authorization: Token <token_value>
 }
 
 
 - **Update an existing Movie**:
-Assuming the update data (json object) will follow the same pattern as the json object shared in json format.
-REQUEST TYPE: PUT
-URL: https://movie-fynd-task.herokuapp.com/movie
+Assuming the update data (json object) will follow the same pattern as the json object shared in json format.\
+REQUEST TYPE: PUT\
+URL: https://movie-fynd-task.herokuapp.com/movie\
 JSON BODY:
 {
     "name": "The Office",
@@ -75,7 +74,7 @@ JSON BODY:
             "name": "Sad"
         }
     ]
-}
+}\
 HEADER: {
     Authorization: Token <token_value>
 }
@@ -83,12 +82,14 @@ HEADER: {
 
 
 - **Delete a Movie**:
-REQUEST TYPE: DELETE
-URL: https://movie-fynd-task.herokuapp.com/movie
+REQUEST TYPE: DELETE\
+URL: https://movie-fynd-task.herokuapp.com/movie\
 JSON BODY:
 {
     "name": "The Office"
-}
+}\
 HEADER: {
     Authorization: Token <token_value>
-}
+}\
+
+Note: For all admin operations a token value is required to authorize the user.\
