@@ -13,11 +13,11 @@ Now the application is ready. To test the APIs, we can do it using POSTMAN:
 Movies can be searched using different parameters: name, director_name, genre_name, imdb_score, popularity:
 #### Get all movies: 
 REQUEST TYPE: GET\
-URL: https://movie-fynd-task.herokuapp.com/movie \
+URL: https://movie-fynd-task.herokuapp.com/movie
 
 #### Filter result or search by parameters:
 REQUEST TYPE: GET\
-URL: https://movie-fynd-task.herokuapp.com/movie?search={value} \
+URL: https://movie-fynd-task.herokuapp.com/movie?search={value}
 
 - Search a particular movie by name
 REQUEST TYPE: GET\
