@@ -1,4 +1,4 @@
-HOW TO CLONE AND USE THE DJANGO APP
+#HOW TO CLONE AND USE THE DJANGO APP
 Step1: Create a virtualenv and activate it
 Step2: Clone the repo using: git clone https://github.com/Sanket-Tantia/movie-fynd-task.git
 Step3: Install the dependencies using command: pip install -r requirements.txt
@@ -12,32 +12,32 @@ Now the application is ready. To test the APIs, we can do it using POSTMAN:
 To search for movies:
 Movies can be searched using different parameters: name, director_name, genre_name, imdb_score, popularity
 
-Get all movies: 
-REQUEST TYPE: GET
+#Get all movies: 
+#REQUEST TYPE: GET
 URL: https://go-fynd-imdb.herokuapp.com/movie
 
-Filter result or search by parameters:
-REQUEST TYPE: GET
+#Filter result or search by parameters:
+#REQUEST TYPE: GET
 URL: https://go-fynd-imdb.herokuapp.com/movie?search={value}
 
 e.g 
-Search a particular movie by name
-REQUEST TYPE: GET
+#Search a particular movie by name
+#REQUEST TYPE: GET
 URL: https://go-fynd-imdb.herokuapp.com/api/movie?search=vertigo
 
-Search a particular movie by director name
-REQUEST TYPE: GET
+#Search a particular movie by director name
+#REQUEST TYPE: GET
 URL: https://go-fynd-imdb.herokuapp.com/api/movie?search=Alfred Hitchcock
 
 
-Search a particular movie by genre
-REQUEST TYPE: GET
+#Search a particular movie by genre
+#REQUEST TYPE: GET
 URL: https://go-fynd-imdb.herokuapp.com/api/movie?search=Adventure
 
-All search parameters are case insensitive
+Note: All search parameters are case insensitive
 
 
-Admin Create A Movie:
+#Admin Create A Movie:
 Assuming the new data (json object) will follow the same pattern as the json object shared in json format.
 REQUEST TYPE: POST
 URL: https://go-fynd-imdb.herokuapp.com/movie
@@ -60,7 +60,7 @@ HEADER: {
 }
 
 
-Admin Update A Movie:
+#Admin Update A Movie:
 Assuming the update data (json object) will follow the same pattern as the json object shared in json format.
 REQUEST TYPE: PUT
 URL: https://go-fynd-imdb.herokuapp.com/movie
@@ -84,7 +84,7 @@ HEADER: {
 
 
 
-Admin Delete A Movie:
+#Admin Delete A Movie:
 REQUEST TYPE: DELETE
 URL: https://go-fynd-imdb.herokuapp.com/movie
 JSON BODY:
