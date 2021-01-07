@@ -7,9 +7,10 @@
 - Step6: Start the localhost server: python manage.py runserver
 
 
-Now the application is ready. To test the APIs, we can do it using POSTMAN:
+Now the application is ready. To test the APIs, we can do it using POSTMAN.\
+In case the application needs to be tested locally, replace the deployed heroku url with localhost url.
 
-## Search movies:
+### Search movies:
 Movies can be searched using different parameters: name, director_name, genre_name, imdb_score, popularity:
 #### Get all movies: 
 REQUEST TYPE: GET\
@@ -33,7 +34,7 @@ URL: https://movie-fynd-task.herokuapp.com/api/movie?search=Adventure
 
 Note: All search parameters are case insensitive
 
-#### Admin operations
+### Admin operations
 - **Create a new Movie**:
 Assuming the new data (json object) will follow the same pattern as the json object shared in json format.\
 REQUEST TYPE: POST\
