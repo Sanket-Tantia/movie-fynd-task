@@ -1,1 +1,1 @@
-web: gunicorn movies.wsgi --log-level=info --log-file -
+web: gunicorn fynd_task.wsgi --log-level=info --log-file -
