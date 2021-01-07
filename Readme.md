@@ -34,7 +34,7 @@ URL: https://movie-fynd-task.herokuapp.com/api/movie?search=Adventure
 Note: All search parameters are case insensitive
 
 #### Admin operations
-- **Create a new Movie** :
+- **Create a new Movie**:
 Assuming the new data (json object) will follow the same pattern as the json object shared in json format.\
 REQUEST TYPE: POST\
 URL: https://movie-fynd-task.herokuapp.com/movie \
@@ -81,7 +81,7 @@ HEADER: {
 
 
 
-- **Delete a Movie**:
+- **Delete a Movie**:\
 REQUEST TYPE: DELETE\
 URL: https://movie-fynd-task.herokuapp.com/movie \
 JSON BODY:
